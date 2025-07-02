@@ -5,7 +5,7 @@ services:
       ports:
          - 18080:80
       volumes:
-         - ./abc:/usr/share/nginx/html
+         - ./data:/usr/share/nginx/html
          - /vol2/1000/阿里云盘:/usr/share/nginx/html/阿里云盘
          - /vol2/1000/downloads:/usr/share/nginx/html/downloads
          - /vol2/1000/file:/usr/share/nginx/html/file
