@@ -10,9 +10,10 @@ FILES=(
   "fix-permissions.sh"
   "nginx.conf"
   "start.sh"
+  "README.md"
 )
 
-BASE_URL="https://nginx-file.meimolihan.eu.org/nginx"
+BASE_URL="https://gitee.com/meimolihan/index/raw/master/nginx"
 
 # 下载所有文件
 for file in "${FILES[@]}"; do
