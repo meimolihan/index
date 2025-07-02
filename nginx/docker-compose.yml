@@ -1,15 +1,15 @@
 services:
-  file-server:
-    build: .
-    container_name: nginx-file-server
-    ports:
-      - "18080:80"
-    volumes:
-      - ./abc:/usr/share/nginx/html
-      - /vol2/1000/阿里云盘:/usr/share/nginx/html/阿里云盘
-      - /vol2/1000/downloads:/usr/share/nginx/html/downloads
-      - /vol2/1000/file:/usr/share/nginx/html/file
-      - /vol2/1000/media:/usr/share/nginx/html/media
-      - /vol2/1000/backup:/usr/share/nginx/html/backup
-    user: root
-    restart: unless-stopped
+   file-server:
+      build: .
+      container_name: nginx-file-server
+      ports:
+         - 18080:80
+      volumes:
+         - ./abc:/usr/share/nginx/html
+         - /vol2/1000/阿里云盘:/usr/share/nginx/html/阿里云盘
+         - /vol2/1000/downloads:/usr/share/nginx/html/downloads
+         - /vol2/1000/file:/usr/share/nginx/html/file
+         - /vol2/1000/media:/usr/share/nginx/html/media
+         - /vol2/1000/backup:/usr/share/nginx/html/backup
+      user: root
+      restart: unless-stopped
