@@ -16,10 +16,12 @@ FILES=(
 BASE_URL="https://gitee.com/meimolihan/index/raw/master/nginx"
 
 # 下载所有文件
+echo ========== 开始下载相关文件 ==========
 for file in "${FILES[@]}"; do
   echo "正在下载 $file ..."
   wget -q --show-progress "${BASE_URL}/${file}" -O "$file"
 done
+echo ========== 相关文件下载完成 ==========
 
 # 检查所有文件是否存在且非空
 for file in "${FILES[@]}"; do
@@ -31,7 +33,7 @@ done
 
 # 如果全部成功，执行你的逻辑
 do_start() {
-  echo "✅ 所有文件下载成功，开始部署本地nginx文件服务器..."
+  echo "✅ 所有文件下载成功，开始部署本地 nginx 文件服务器..."
   sh start.sh
 }
 
